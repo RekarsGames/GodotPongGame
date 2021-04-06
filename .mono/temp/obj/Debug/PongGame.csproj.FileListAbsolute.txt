@@ -1,0 +1,8 @@
+D:\Hobby Stuff\PongGame\Game\.mono\temp\bin\Debug\PongGame.dll
+D:\Hobby Stuff\PongGame\Game\.mono\temp\bin\Debug\PongGame.pdb
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.csprojAssemblyReference.cache
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.AssemblyInfoInputs.cache
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.AssemblyInfo.cs
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.csproj.CoreCompileInputs.cache
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.dll
+D:\Hobby Stuff\PongGame\Game\.mono\temp\obj\Debug\PongGame.pdb

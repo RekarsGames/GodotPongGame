@@ -1,0 +1,141 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/PlayerTwo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/GameController.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/SideWall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/HorizontalWall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Roboto-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 7 )
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Board" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Board" type="HBoxContainer" parent="Score Board"]
+margin_right = 1024.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 200
+alignment = 1
+
+[node name="P1Area" type="HBoxContainer" parent="Score Board/Board"]
+margin_left = 226.0
+margin_right = 415.0
+margin_bottom = 100.0
+
+[node name="P1Label" type="Label" parent="Score Board/Board/P1Area"]
+margin_top = 32.0
+margin_right = 151.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
+text = "P1 SCORE: "
+align = 1
+valign = 1
+
+[node name="P1Score" type="Label" parent="Score Board/Board/P1Area"]
+margin_left = 155.0
+margin_top = 32.0
+margin_right = 189.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "00"
+
+[node name="P2Area" type="HBoxContainer" parent="Score Board/Board"]
+margin_left = 615.0
+margin_right = 797.0
+margin_bottom = 100.0
+
+[node name="P2Label" type="Label" parent="Score Board/Board/P2Area"]
+margin_top = 32.0
+margin_right = 144.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 3 )
+text = "P2 SCORE:"
+align = 1
+valign = 1
+
+[node name="P2Score" type="Label" parent="Score Board/Board/P2Area"]
+margin_left = 148.0
+margin_top = 32.0
+margin_right = 182.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 4 )
+text = "00"
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 300 )
+
+[node name="PlayerTwo" parent="." instance=ExtResource( 3 )]
+position = Vector2( 974, 300 )
+
+[node name="Ball" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 300 )
+
+[node name="GameController" parent="." instance=ExtResource( 4 )]
+
+[node name="SideWall" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 300 )
+scale = Vector2( 1, 0.785 )
+
+[node name="SideWall2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1024, 300 )
+scale = Vector2( 1, 0.785 )
+
+[node name="HorizontalWall" parent="." instance=ExtResource( 6 )]
+position = Vector2( 512, 70 )
+scale = Vector2( 0.99, 1 )
+
+[node name="HorizontalWall2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 512, 530 )
+scale = Vector2( 0.99, 1 )
+
+[node name="StartGameLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 5 )
+text = "TO START GAME
+HIT SPACE KEY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
